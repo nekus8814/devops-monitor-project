@@ -1,1 +1,21 @@
+# Logs
 logs.txt
+*.log
+*.out
+
+# Temporary files
+*.swp
+*.tmp
+*.bak
+
+# Bash history
+.bash_history
+
+# Docker
+*.tar
+*.img
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
