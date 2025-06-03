@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# scriptname - Check system health
+# scriptname - Monitor system health
 # Copyright (C)  03.06.25 
 # scriptname monitor
 /bin/echo "Final branch line"
