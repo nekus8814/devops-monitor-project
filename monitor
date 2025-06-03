@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# scriptname - Check system health
+#
+# Copyright (C)  03.06.25 Nk
+#
+# scriptname monitor
+/bin/echo "System Check @ $(/bin/date)" >> /home/nekus8814/devops/day1/logs.txt
+/bin/echo "---DISK USAGE---" >> /home/nekus8814/devops/day1/logs.txt
+df -h >> /home/nekus8814/devops/day1/logs.txt
+/bin/echo "---MEMORY---" >> /home/nekus8814/devops/day1/logs.txt
+free -m >> /home/nekus8814/devops/day1/logs.txt
+/bin/echo "---UPTIME---" >> /home/nekus8814/devops/day1/logs.txt
+uptime >> /home/nekus8814/devops/day1/logs.txt
+/bin/echo "--------------------" >> /home/nekus8814/devops/day1/logs.txt
