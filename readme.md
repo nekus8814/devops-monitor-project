@@ -14,8 +14,8 @@ This script was built as part of bootcamp preparation. It includes:
 tail -f logs.txt
 
 
-#  Folder Structure
- ~/devops/day1
+##  Folder Structure
+ /devops/day1
      | logs.txt
      | monitor 
      | .gitignore
