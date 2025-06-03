@@ -2,6 +2,7 @@
 # scriptname - Check system health
 # Copyright (C)  03.06.25 
 # scriptname monitor
+/bin/echo "Enhancement branch version"
 /bin/echo "Running from branch: fix-logs"
 /bin/echo "System Check @ $(/bin/date)" >> /home/nekus8814/devops/day1/logs.txt
 /bin/echo "---DISK USAGE---" >> /home/nekus8814/devops/day1/logs.txt
