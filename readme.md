@@ -9,10 +9,10 @@ This script was built as part of bootcamp preparation. It includes:
 
 ## Usage
 
-bash
-./monitor
-tail -f logs.txt 
-tail -n 27 pids.log
+  | bash
+  | ./monitor
+  | tail -f logs.txt 
+  | tail -n 27 pids.log
 
 ## Folder Structure
      | logs.txt
