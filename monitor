@@ -2,11 +2,25 @@
 # scriptname - Monitor system health
 # Copyright (C)  03.06.25 
 # scriptname monitor
-/bin/echo "System Check @ $(/bin/date)" >> /home/nekus8814/devops/day1/logs.txt
-/bin/echo "---DISK USAGE---" >> /home/nekus8814/devops/day1/logs.txt
-df -h >> /home/nekus8814/devops/day1/logs.txt
-/bin/echo "---MEMORY---" >> /home/nekus8814/devops/day1/logs.txt
-free -m >> /home/nekus8814/devops/day1/logs.txt
-/bin/echo "---UPTIME---" >> /home/nekus8814/devops/day1/logs.txt
-uptime >> /home/nekus8814/devops/day1/logs.txt
-/bin/echo "--------------------" >> /home/nekus8814/devops/day1/logs.txt
+
+LOGFILE="$(pwd)/logs/logs.txt"
+mkdir -p "$(dirname "$LOGFILE")" 
+LOGFILE1="$(pwd)/logs/pids.log"
+mkdir -p "$(dirname "$LOGFILE1")"
+
+/bin/echo "Monitor started at $(date)"
+/bin/echo "Operates by $(hostname)" 
+/bin/echo "___________________" >> $LOGFILE
+/bin/echo "System Check @ $(/bin/date)" >> $LOGFILE
+/bin/echo "---SYSTEM INFO---" >> $LOGFILE
+uname -a >> $LOGFILE
+/bin/echo "---DISK USAGE---" >> $LOGFILE
+df -h >> $LOGFILE
+/bin/echo "---MEMORY---" >> $LOGFILE
+free -m >> $LOGFILE
+/bin/echo "---UPTIME---" >> $LOGFILE
+uptime >> $LOGFILE
+/bin/echo "Defunct overview in progress"
+ps aux | grep defunct | grep -v grep >> $LOGFILE1 
+/bin/echo "___________________" >> $LOGFILE
+/bin/echo "Monitor finished at $(date)"
