@@ -5,7 +5,6 @@ This script was built as part of bootcamp preparation. It includes:
  - Bash script 'monitor'
  - Log system that appends to 'logs.txt' or 'pids.log'
  - Git version control and repo at Github
- - Cron to execute a script every minute
 
 ## Usage
 
