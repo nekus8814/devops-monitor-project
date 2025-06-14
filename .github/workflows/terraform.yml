@@ -25,3 +25,31 @@ jobs:
         AWS_REGION: eu-north-1
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Terraform Plan
+      run: terraform plan
+      env:
+        AWS_DEFAULT_REGION: eu-north-1
+        AWS_REGION: eu-north-1
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
+      env:
+        AWS_DEFAULT_REGION: eu-north-1
+        AWS_REGION: eu-north-1
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Sleep 2 Minutes
+      run: sleep 120
+
+    - name: Terraform Destroy
+      run: terraform destroy -auto-approve
+      env:
+        AWS_DEFAULT_REGION: eu-north-1
+        AWS_REGION: eu-north-1
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
